@@ -2,6 +2,7 @@
 
 const express = require("express");
 const app = express();
+const port = 4000;
 
 app.get("/", (req,resp)=>{
 resp.send('Hello world')
@@ -14,6 +15,8 @@ app.get('/twitter',(req,resp)=>{
 app.get('/login',(req,resp)=>{
     resp.send('<h1> Please login to the page')
 })
-app.listen(4000)
+app.listen(port,()=>{
+    console.log(`app listening on port ${port}`)
+})
 
 
